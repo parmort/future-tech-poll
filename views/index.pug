@@ -2,13 +2,23 @@ extends layout.pug
 
 block content
     form(method="post").text-center
-        label(for="q1") Do you think that the possible technological developments of the next 50 years will have a postive impact?
-        br
-        span.question-answer
-            input(type="radio", name="q1", id="q1-1", value="Yes")
-            label(for="q1-1") Yes
-        span.question-answer
-            input(type="radio", name="q1", id="q1-2", value="No")
-            label(for="q1-2") No
+        .question
+            label(for="q1") Do you think that the possible technological developments of the next 50 years will have a postive impact?
+            br
+            span.question-answer
+                input(type="radio", name="q1", id="q1-1")
+                label(for="q1-1") Yes
+            span.question-answer
+                input(type="radio", name="q1", id="q1-2")
+                label(for="q1-2") No
+        .question
+            label(for="q2") Do you think that you will be able to have custom organs grown in a lab in the next 50 years?
+            br
+            span.question-answer
+                input(type="radio", name="q2", id="q2-1")
+                label(for="q2-1") Yes
+            span.question-answer
+                input(type="radio", name="q2", id="q2-1")
+                label(for="q2-1") No
         br
         input(type="submit", value="Submit Form")

@@ -7,7 +7,12 @@
     background-color: #f5f5f5;
 }
 
+div.question{
+  padding-top: 20px;
+}
+
 span.question-answer{
+  padding-left: 10px;
   padding-right: 10px;
 }
 span.question-answer label{
