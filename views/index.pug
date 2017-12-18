@@ -1,7 +1,9 @@
 extends layout.pug
 
 block content
-    h1 test
     form(method="post")
-        input(type="text", name="test")
-        input(type="submit", value="test")
+        label(for="q1") Do you think that the possible technological developments of the next 50 years will have a postive impact?
+        br
+        input(type="text", name="q1")
+        br
+        input(type="submit", value="Submit Form")

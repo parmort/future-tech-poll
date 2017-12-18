@@ -16,4 +16,8 @@ app.get('/', (req, res) => {
     res.render('index', {copr: copr});
 });
 
+app.post('/', (req, res) => {
+    res.send('You have come to the right place POSTING to /');
+});
+
 app.listen(process.env.PORT || 3000, () => console.log('Server started on Port ' + (process.env.PORT || 3000)));
