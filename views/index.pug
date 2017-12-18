@@ -6,19 +6,28 @@ block content
             label(for="q1") Do you think that the possible technological developments of the next 50 years will have a postive impact?
             br
             span.question-answer
-                input(type="radio", name="q1", id="q1-1")
+                input#q1-1(type="radio", name="q1")
                 label(for="q1-1") Yes
             span.question-answer
-                input(type="radio", name="q1", id="q1-2")
+                input#q1-2(type="radio", name="q1")
                 label(for="q1-2") No
         .question
             label(for="q2") Do you think that you will be able to have custom organs grown in a lab in the next 50 years?
             br
             span.question-answer
-                input(type="radio", name="q2", id="q2-1")
+                input#q2-1(type="radio", name="q2")
                 label(for="q2-1") Yes
             span.question-answer
-                input(type="radio", name="q2", id="q2-1")
-                label(for="q2-1") No
+                input#q2-2(type="radio", name="q2")
+                label(for="q2-2") No
+        .question
+            label(for="q3") In the next 50 years, will computers be able to replicate human art indistinquishably?
+            br
+            span.question-answer
+                input#q3-1(type="radio", name="q3")
+                label(for="q3-1") Yes
+            span.question-answer
+                input#q3-2(type="radio", name="q3")
+                label(for="q3-2") No
         br
         input(type="submit", value="Submit Form")
