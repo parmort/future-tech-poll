@@ -1,9 +1,14 @@
 extends layout.pug
 
 block content
-    form(method="post")
+    form(method="post").text-center
         label(for="q1") Do you think that the possible technological developments of the next 50 years will have a postive impact?
         br
-        input(type="text", name="q1")
+        span.question-answer
+            input(type="radio", name="q1", id="q1-1", value="Yes")
+            label(for="q1-1") Yes
+        span.question-answer
+            input(type="radio", name="q1", id="q1-2", value="No")
+            label(for="q1-2") No
         br
         input(type="submit", value="Submit Form")
