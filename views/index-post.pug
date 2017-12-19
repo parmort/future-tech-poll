@@ -1,5 +1,15 @@
 extends layout
 
 block content
-    each ans, ques in answers
-        p= 'Question ' + (ques + 1) + ': ' + ans
+    .text-center
+        each ans, ind in answers
+            strong= "Question " + (ind + 1)
+            br
+            strong= questions[ind]
+            br
+            if ans == "yes"
+                em= "You answered " + ans + ". "
+                p= stat[ind]['y']
+            else
+                em= "You answered " + ans + ". "
+                p= stat[ind]['n']

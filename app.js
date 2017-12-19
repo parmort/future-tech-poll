@@ -20,10 +20,17 @@ const ques = [
     "Do you think that you will be able to have custom organs grown in a lab in the next 50 years?",
     "In the next 50 years, will computers be able to replicate human art indistinquishably?",
     "Will the science to teleport objects be around in 50 years?",
-    "50 years from now, will we have colonized other planets?"
+    "50 years from now, will we have colonized other planets?",
+]
+const stats = [
+    {'y': "59% of people agree with you.", 'n': "41% of people agree with you"},
+    {'y': "81% of people agree with you.", 'n': "19% of people agree with you"},
+    {'y': "51% of people agree with you.", 'n': "49% of people agree with you"},
+    {'y': "39% of people agree with you.", 'n': "61% of people agree with you"},
+    {'y': "33% of people agree with you.", 'n': "67% of people agree with you"},
 ]
 
-function JsonToArray(json){
+function JsonToCapArray(json){
     let out = [];
     for(let val in json){
         let value = json[val]
@@ -38,8 +45,8 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
     let body = req.body;
-    let response = JsonToArray(body);
-    res.render('index-post', {answers: response, ques: ques});
+    let response = JsonToCapArray(body);
+    res.render('index-post', {answers: response, questions: ques, stat: stats});
 });
 
 const port = process.env.PORT || 3000
