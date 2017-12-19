@@ -22,6 +22,10 @@ const ques = [
     "Will the science to teleport objects be around in 50 years?",
     "50 years from now, will we have colonized other planets?",
     "Will people be able to control the weather in 50 years?",
+    "Do you think it would be good if parents could alter the DNA of their children in the fetus?",
+    "Do you think it would be good if robots would become the primary caregivers for the elderly?",
+    "Do you think it would be good if drones had full right-of-way in US airspace?",
+    "Do you think it would be good if implants to enhance humans were mainstream?"
 ]
 const stats = [
     {'y': "59% of people agree with you.", 'n': "41% of people agree with you"},
@@ -30,6 +34,10 @@ const stats = [
     {'y': "39% of people agree with you.", 'n': "61% of people agree with you"},
     {'y': "33% of people agree with you.", 'n': "67% of people agree with you"},
     {'y': "19% of people agree with you.", 'n': "81% of people agree with you"},
+    {'y': "34% of people agree with you.", 'n': "66% of people agree with you"},
+    {'y': "35% of people agree with you.", 'n': "65% of people agree with you"},
+    {'y': "37% of people agree with you.", 'n': "63% of people agree with you"},
+    {'y': "47% of people agree with you.", 'n': "53% of people agree with you"}
 ]
 
 function JsonToCapArray(json){
