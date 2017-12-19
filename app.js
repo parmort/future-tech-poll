@@ -48,6 +48,9 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
     let body = req.body;
     let response = JsonToCapArray(body);
+    if(response.length != ques.length){
+        res.send("Please answer all of the questions");
+    }
     res.render('index-post', {answers: response, questions: ques, stat: stats});
 });
 
