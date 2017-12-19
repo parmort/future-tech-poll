@@ -21,7 +21,7 @@ const ques = [
     "In the next 50 years, will computers be able to replicate human art indistinquishably?",
     "Will the science to teleport objects be around in 50 years?",
     "50 years from now, will we have colonized other planets?",
-    "Will people be able to control the weather in 50 years?"
+    "Will people be able to control the weather in 50 years?",
 ]
 const stats = [
     {'y': "59% of people agree with you.", 'n': "41% of people agree with you"},
@@ -29,7 +29,7 @@ const stats = [
     {'y': "51% of people agree with you.", 'n': "49% of people agree with you"},
     {'y': "39% of people agree with you.", 'n': "61% of people agree with you"},
     {'y': "33% of people agree with you.", 'n': "67% of people agree with you"},
-    {'y': "19% of people agree with you.", 'n': "81% of people agree with you"}
+    {'y': "19% of people agree with you.", 'n': "81% of people agree with you"},
 ]
 
 function JsonToCapArray(json){
@@ -42,7 +42,7 @@ function JsonToCapArray(json){
 }
 
 app.get('/', (req, res) => {
-    res.render('index', {ques: ques});
+    res.render('index', {questions: ques});
 });
 
 app.post('/', (req, res) => {
