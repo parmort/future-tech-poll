@@ -15,13 +15,28 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Vars
-const copr = "Copr. 2017 © N. Prochnau. All Rights Reserved."
+const ques = [
+    "Do you think that the possible technological developments of the next 50 years will have a postive impact?",
+    "Do you think that you will be able to have custom organs grown in a lab in the next 50 years?",
+    "In the next 50 years, will computers be able to replicate human art indistinquishably?",
+    "Will the science to teleport objects be around in 50 years?",
+    "50 years from now, will we have colonized other planets?"
+]
 
 app.get('/', (req, res) => {
-    res.render('index', {copr: copr});
+    res.render('index', {ques: ques});
 });
 
 app.post('/', (req, res) => {
+    let body = req.body;
+    let response = [];
+    for (let ans in body){
+        let value = body[ans];
+        response.push(value);
+    }
+    //console.log(response);
+    res.render('index-post', {answers: response, ques: ques});
 });
 
-app.listen(process.env.PORT || 3000, () => console.log('Server started on Port ' + (process.env.PORT || 3000)));
+const port = process.env.PORT || 3000
+app.listen(port, () => console.log('Server started on Port ' + (port)));

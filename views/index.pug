@@ -3,49 +3,49 @@ extends layout.pug
 block content
     form(method="post").text-center
         .question
-            label(for="q1") Do you think that the possible technological developments of the next 50 years will have a postive impact?
+            label(for="q1")= ques[0]
             br
             span.question-answer
                 input#q1-1(type="radio", name="q1", value="yes")
                 label(for="q1-1") Yes
             span.question-answer
-                input#q1-2(type="radio", name="q1")
+                input#q1-2(type="radio", name="q1", value="no")
                 label(for="q1-2") No
         .question
             label(for="q2") Do you think that you will be able to have custom organs grown in a lab in the next 50 years?
             br
             span.question-answer
-                input#q2-1(type="radio", name="q2")
+                input#q2-1(type="radio", name="q2", value="yes")
                 label(for="q2-1") Yes
             span.question-answer
-                input#q2-2(type="radio", name="q2")
+                input#q2-2(type="radio", name="q2", value="no")
                 label(for="q2-2") No
         .question
             label(for="q3") In the next 50 years, will computers be able to replicate human art indistinquishably?
             br
             span.question-answer
-                input#q3-1(type="radio", name="q3")
+                input#q3-1(type="radio", name="q3", value="yes")
                 label(for="q3-1") Yes
             span.question-answer
-                input#q3-2(type="radio", name="q3")
+                input#q3-2(type="radio", name="q3", value="no")
                 label(for="q3-2") No
         .question
             label(for="q4") Will the science to teleport objects be around in 50 years?
             br
             span.question-answer
-                input#q4-1(type="radio", name="q4")
+                input#q4-1(type="radio", name="q4", value="yes")
                 label(for="q4-1") Yes
             span.question-answer
-                input#q4-2(type="radio", name="q4")
+                input#q4-2(type="radio", name="q4", value="no")
                 label(for="q4-2") No
         .question
             label(for="q5") 50 years from now, will we have colonized other planets?
             br
             span.question-answer
-                input#q5-1(type="radio", name="q5")
+                input#q5-1(type="radio", name="q5", value="yes")
                 label(for="q5-1") Yes
             span.question-answer
-                input#q5-2(type="radio", name="q5")
+                input#q5-2(type="radio", name="q5", value="no")
                 label(for="q5-2") Yes
         br
         input(type="submit", value="Submit Form")
