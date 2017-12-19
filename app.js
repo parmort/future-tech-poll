@@ -23,18 +23,22 @@ const ques = [
     "50 years from now, will we have colonized other planets?"
 ]
 
+function JsonToArray(json){
+    let out = [];
+    for(let val in json){
+        let value = json[val]
+        out.push(value);
+    }
+    return out;
+}
+
 app.get('/', (req, res) => {
     res.render('index', {ques: ques});
 });
 
 app.post('/', (req, res) => {
     let body = req.body;
-    let response = [];
-    for (let ans in body){
-        let value = body[ans];
-        response.push(value);
-    }
-    //console.log(response);
+    let response = JsonToArray(body);
     res.render('index-post', {answers: response, ques: ques});
 });
 
