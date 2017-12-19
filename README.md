@@ -1,4 +1,4 @@
-# Tech Poll - *Nolan Prochnau*
+# Tech Poll
 ### Assets Used
 - [Express 4.16.1][1]
 - [Pug 2.0.0][2]
