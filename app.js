@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const ques = [
     "Do you think that the possible technological developments of the next 50 years will have a postive impact?",
     "Do you think that you will be able to have custom organs grown in a lab in the next 50 years?",
-    "In the next 50 years, will computers be able to replicate human art indistinquishably?",
+    "In the next 50 years, will computers be able to replicate human art indistinguishably?",
     "Will the science to teleport objects be around in 50 years?",
     "50 years from now, will we have colonized other planets?",
     "Will people be able to control the weather in 50 years?",
