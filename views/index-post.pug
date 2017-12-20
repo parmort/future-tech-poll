@@ -1,18 +1,28 @@
 extends layout
 
+
 block content
     .text-center
+        - let a
         each ans, ind in answers
-            strong= "Question " + (ind + 1)
-            br
-            strong= questions[ind]
-            br
-            if ans == "yes"
-                em= "You answered " + ans + ". "
-                p= stat[ind]['y']
-            else
-                em= "You answered " + ans + ". "
-                p= stat[ind]['n']
+            .card.question
+                .card-block
+                    h4.card-title= "Question " + (ind + 1)
+                    h6.mb-2.text-muted.card-subtitle= questions[ind]
+                    .card-text
+                        if ans == "yes"
+                            em.text-warning= "You answered " + ans + ". "
+                            if stat[ind]['c'] == 'g'
+                                p.text-success= stat[ind]['y']
+                            else
+                                p.text-danger= stat[ind]['y']
+                        else
+                            em.text-warning= "You answered " + ans + ". "
+                            if stat[ind]['c'] == 'r'
+                                p.text-success= stat[ind]['n']
+                            else
+                                p.text-danger= stat[ind]['n']
 
+    .text-center
         form(method="get")
             input(type="submit", value="Go Home")
