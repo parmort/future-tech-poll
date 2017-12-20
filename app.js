@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const ques = [
     "Do you think that the possible technological developments of the next 50 years will have a postive impact?",
     "Do you think that you will be able to have custom organs grown in a lab in the next 50 years?",
-    "In the next 50 years, will computers be able to replicate human art indistinguishably?",
+    "In the next 50 years, will computers be able to replicate human art indistinquishably?",
     "Will the science to teleport objects be around in 50 years?",
     "50 years from now, will we have colonized other planets?",
     "Will people be able to control the weather in 50 years?",
@@ -28,16 +28,16 @@ const ques = [
     "Do you think it would be good if implants to enhance humans were mainstream?"
 ]
 const stats = [
-    {'y': "59% of people agree with you.", 'n': "41% of people agree with you"},
-    {'y': "81% of people agree with you.", 'n': "19% of people agree with you"},
-    {'y': "51% of people agree with you.", 'n': "49% of people agree with you"},
-    {'y': "39% of people agree with you.", 'n': "61% of people agree with you"},
-    {'y': "33% of people agree with you.", 'n': "67% of people agree with you"},
-    {'y': "19% of people agree with you.", 'n': "81% of people agree with you"},
-    {'y': "34% of people agree with you.", 'n': "66% of people agree with you"},
-    {'y': "35% of people agree with you.", 'n': "65% of people agree with you"},
-    {'y': "37% of people agree with you.", 'n': "63% of people agree with you"},
-    {'y': "47% of people agree with you.", 'n': "53% of people agree with you"}
+    {'y': "59% of people agree with you.", 'n': "41% of people agree with you", 'c': 'g'},
+    {'y': "81% of people agree with you.", 'n': "19% of people agree with you", 'c': 'g'},
+    {'y': "51% of people agree with you.", 'n': "49% of people agree with you", 'c': 'g'},
+    {'y': "39% of people agree with you.", 'n': "61% of people agree with you", 'c': 'r'},
+    {'y': "33% of people agree with you.", 'n': "67% of people agree with you", 'c': 'r'},
+    {'y': "19% of people agree with you.", 'n': "81% of people agree with you", 'c': 'r'},
+    {'y': "34% of people agree with you.", 'n': "66% of people agree with you", 'c': 'r'},
+    {'y': "35% of people agree with you.", 'n': "65% of people agree with you", 'c': 'r'},
+    {'y': "37% of people agree with you.", 'n': "63% of people agree with you", 'c': 'r'},
+    {'y': "47% of people agree with you.", 'n': "53% of people agree with you", 'c': 'r'}
 ]
 
 function JsonToCapArray(json){
