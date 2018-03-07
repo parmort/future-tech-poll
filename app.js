@@ -26,7 +26,7 @@ const ques = [
     "Do you think it would be good if robots would become the primary caregivers for the elderly?",
     "Do you think it would be good if drones had full right-of-way in US airspace?",
     "Do you think it would be good if implants to enhance humans were mainstream?"
-]
+];
 const stats = [
     {'y': "59% of people agree with you.", 'n': "41% of people agree with you", 'c': 'g'},
     {'y': "81% of people agree with you.", 'n': "19% of people agree with you", 'c': 'g'},
@@ -38,12 +38,12 @@ const stats = [
     {'y': "35% of people agree with you.", 'n': "65% of people agree with you", 'c': 'r'},
     {'y': "37% of people agree with you.", 'n': "63% of people agree with you", 'c': 'r'},
     {'y': "47% of people agree with you.", 'n': "53% of people agree with you", 'c': 'r'}
-]
+];
 
 function JsonToCapArray(json){
     let out = [];
     for(let val in json){
-        let value = json[val]
+        let value = json[val];
         out.push(value);
     }
     return out;
@@ -62,5 +62,5 @@ app.post('/', (req, res) => {
     res.render('index-post', {answers: response, questions: ques, stat: stats});
 });
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3000;
 app.listen(port, () => console.log('Server started on Port ' + (port)));
